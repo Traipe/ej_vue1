@@ -1,26 +1,28 @@
+<!--Single File Component-->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!--Acá va el html-->
+  <main id="app">
+    <h1>Hola Vue ✌️</h1>
+    <h2>Contador: {{ contador }}</h2>
+    <button @click="saludar">Aumentar ➕</button>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// acá va la lógica de nuestro componente
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  //Lo que haya dentro de data seran variables reactivas, es decir, que si cambian su valor, se va a actualizar la vista  
+  data() {
+    return {
+      contador: 0
+    }
+  },
+  methods: {
+    saludar() {
+      this.contador++;
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
