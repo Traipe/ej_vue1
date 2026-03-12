@@ -1,4 +1,4 @@
-# ej_vue1
+# ej_vue1 M6 Framewokr Vue.js
 
 ## Project setup
 ```
